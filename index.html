@@ -162,11 +162,58 @@
     </section>
 
     <section class="container4">
-        <div class="block3">
-            <div>
+        <v class="block3">
+          <div class="cbd4a">
                 <h1 class="whiteH1">Mover Commits</h1><br>
+                <h3>Caso 1: Mover Para uma Branch Existente</h3><br>
+                <div class="code">
+                    <cod>
+                        git checkout existingbranch
+                        git merge master         # Bring the commits here
+                        git checkout master
+                        git reset --keep HEAD~3  # Move master back by 3 commits.
+                        git checkout existingbranch
+                        
+                    </cod>
+                </div>
+                <dt>
+                    <li>
+                       <code>--keep </code>
+                       <span> 
+                           : preserva quaisquer alterações não confirmadas que você possa ter em arquivos não relacionados 
+                       </span>
+                      <span> 
+                          ou anula se essas alterações precisarem ser substituídas - da mesma forma que git checkoutocorre.
+                      </span>                       
+                    </li>
+                </dt>
+                <div>
+                    <img src="/imgs/commit.2.jpg">
+                </div>
            </div>
-           
+    
+           <div class="cbd4c">
+            <h3>Caso 2: Movendo para uma nova branch</h3><br>
+            <div class="code">
+                git branch newbranch      # Create a new branch, containing all current commits
+                git reset --keep HEAD~3   # Move master back by 3 commits 
+                git checkout newbranch    # Go to the new branch that still has the desired commits
+                # Warning: after this it's not safe to do a rebase in newbranch without extra care.
+
+            </div>
+            <dt> 
+                <li>Ps:é brigatório o uso do  <code>:</code> antes do nome do branch. </li>
+            </dt>
+            <h4>Comando Alternativo</h4><br>
+            <div class="code">git push origin --delete nome_do_branch_remoto</div>
+            <dt>
+                <li>
+                    PS: Para o caso de  receber o erro error:<code>unable to delete ‘nome_do_branch_remoto’: remote ref does not exist error: failed to push some refs to ‘git@repositorio’</code> ,é porquê alguém excluiu o branch antes de você.
+                </li>
+            </dt>
+        </div>
+   
+            
         </div>
     </section>
     <section class="container1">

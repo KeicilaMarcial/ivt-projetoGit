@@ -57,10 +57,60 @@
     </section>
     <section class="container4">
         <div class="block3">
-            <div>
+            <div class="cbd4a">
                 <h1 class="whiteH1">Repositório Local</h1><br>
+                <div class="box">
+                    <h3>Caso 1: repositório do zero</h3><br>
+                     <dl>
+                        <li>Crie um direório para conter o projeto</li>
+                        <li>Navegue até esse diretório</li>
+                        <li>Digite: <code>git init</code></li>
+                        <li>Digite <code>git add</code> Para adiconar os aquivos</li>
+                        <li>Digite <code>git commit</code></li>
+                    </dl><br>
+                    <h3>Caso 2: Um novo repositório de um projeto existente </h3><br>
+                    <dl>
+                        <li>Vá para o diretório que contém o projeto </li>
+						<li>Digite: <code>git init</code></li>
+                        <li>Digite <code>git add</code> Para adiconar os aquivos</li>
+                        <li>Provavelmente, você desejará criar um arquivo <code>.gitignore</code> imediatamente, para indicar todos os arquivos que não deseja rastrear. Use <code>git add .gitignore também.</code> </li>
+                        <li>Digite <code>git commit</code></li>
+                    </dl>
+                </div>
            </div>
-           
+
+            <div class="cbd4c">
+                <h3>BONUS: Conectando ao github</h3><br>
+                <dt> 
+                    <li>Vá para Github </li>
+                    <li>Log na sua conta</li>
+                    <li>Clique no botão novo repositório no canto superior direito. Você terá a opção de inicializar o repositório com um arquivo README</li>
+                    <li>Clique no botão “Criar repositório”. </li><br>
+                </dt>
+                <h4>
+                    <span>Agora siga o segundo conjunto de instruções</span><span> “Envie um repositório existente ...”</span>
+                    </h4><br>
+                <div class="code">
+                    <cod>
+                        $ git remote add origin git@github.com:username/new_repo
+                        $ git push -u origin master
+                    </cod>
+                </div>
+                
+                <h4>Na verdade, a primeira linha das instruções dirá </h4><br>
+                <div class="code"><code>$ git remote add origin https://github.com/username/new_repo</code></div>
+                
+                <h4>
+                    <span>
+                        Porem utilizando git@github.com: username / new_repo
+                    </span> <br> 
+                    <span> em vez de  https://github.com/username/new_repo,  não será </span>
+                    <span><br>
+                  necessário digitar sua senha toda vez que enviar algo para o github
+                    </span>
+                </h4>
+
+            </div>
         </div>
     </section>
     <section class="container3">

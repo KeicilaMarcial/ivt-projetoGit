@@ -59,7 +59,7 @@
         <div class="block3">
             <div class="cbd4a">
                 <h1 class="whiteH1">Repositório Local</h1><br>
-                <div class="box">
+                <div>
                     <h3>Caso 1: repositório do zero</h3><br>
                      <dl>
                         <li>Crie um direório para conter o projeto</li>
@@ -115,12 +115,52 @@
     </section>
     <section class="container3">
         <div class="block3">
-            <div>
+            <div class="cbd4a">
                 <h1>Exclusão de Branches</h1><br>
-           </div>
+                <div>
+                    <h3>Caso 1: Excluir Branch Local</h3><br>
+                    <div class="code">
+                        <cod>
+                            $git branch -d nome_do_branch
+                            $git branch -D nome_do_branch
+                        </cod>
+                    </div>
+                    <h3>Diferenças entre -d e -D</h3><br>
+                     <dl>
+                        <li>
+                            <span><code>-d </code> é um atalho para --delete exclui o branch localmente</span> 
+                            <span>,apenas se você já tiver feito <code>push</code>ou<code>merge</code> com seu branch remoto.</span>
+                        </li>
+                        <li>
+                            <span><code>-D</code> é um atalho para<code>--delete --force</code> , ou seja,</span>
+                            <span>exclui o branch independente de seu status de <code>push</code> ou <code>merge</code>
+                        </li>  
+                    </dl><br>
+                    <div>
+                        <img src="imgs/branch_.jpg">
+                    </div>
+                </div>
+            </div>
+                <div class="cbd4c">
+                    <h3>Caso : Excluir Branch Remoto no Git</h3><br>
+                    <div class="code">
+                        git push origin :nome_do_branch_remoto
+                    </div>
+                    <dt> 
+                        <li>Ps:é brigatório o uso do  <code>:</code> antes do nome do branch. </li>
+                    </dt>
+                    <h4>Comando Alternativo</h4><br>
+                    <div class="code">git push origin --delete nome_do_branch_remoto</div>
+                    <dt>
+                        <li>
+                            PS: Para o caso de  receber o erro error:<code>unable to delete ‘nome_do_branch_remoto’: remote ref does not exist error: failed to push some refs to ‘git@repositorio’</code> ,é porquê alguém excluiu o branch antes de você.
+                        </li>
+                    </dt>
+                </div>
            
         </div>
     </section>
+
     <section class="container4">
         <div class="block3">
             <div>

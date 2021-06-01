@@ -4,9 +4,260 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IVT - Projeto Git - hahahahahah</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title>IVT - Projeto Git</title>
 </head>
 <body>
+    <section class="container1">
+        <div class="block1">
+            <div class="divLogo">
+                <img id="logo" src="imgs/logo.png">
+            </div>
+            <div>
+                <h1>Programa de Formação</h1>
+                <p>Gabriel Couto</p>
+                <p>Keicila Marcial</p>
+            </div>
+        </div>
+        
+    </section>
+    <section class="container2">
+        <div class="block2">
+            <div>
+               <div>
+                   <h1 class="whiteH1">Conflito</h1>
+                   <br>
+                   <p class="whiteP">Um conflito de versões ocorre quando duas ou mais versões commitadas de um código alteraram a mesma linha de um arquivo. Nesse caso, o git não reconhece qual altereção deve ser seguida. Assim o alerta de conflito é gerado.</p>
+                   <p class="whiteP">Na imagem abaixo houve conflito em várias linhas do código, pois houve duas alterações simultâneas commitadas por pessoas diferentes nessas linhas.</p>
+                   <p class="whiteP">O código envolvido com o comentário HEAD corresponde ao código local, enquanto o restante envolvido por <code>=======</code> corresponde ao código remoto.</p>
+                   <img style="width: 100%; margin-top: 1em;" src="./imgs/git-conflito.png" alt="">
+                </div> 
+            </div>
+        </div>
+    </section>
+    <section class="container3">
+        <div class="block3" >
+           <div>
+                <h1>Tags</h1><br>
+                <p>As tags são usadas para marcar pontos importantes no histórico do projeto.</p>
+                <p>O comando <strong>git tag [-comandos (opcional)] "nome-da-tag" [hash do commit (opcional)]</strong> possibilita a criação de tags em commits específicos.</p>
+                <img style="margin-top: 1em;" src="./imgs/git-tag.png" alt="">
+            </div>
+           
+        </div>
+    </section>
+    <section class="container4">
+        <div class="block3">
+            <div>
+                <h1 class="whiteH1">Stash</h1><br>
+                <p class="whiteP">
+                    O comando <strong>git stash</strong> "esconde" as alterações do código que não foram commitadas. 
+                    As alterações são salvas em outro arquivo, sejam elas staged ou unstaged.
+                </p>
+                <p class="whiteP">
+                    É possível exibir os stashs realizados com <strong>git stash list</strong> ou recuperá-los com <strong>git stash pop</strong>.
+                </p>
+                <br>
+                <p class="whiteP">Possível cenário:</p>
+                <img style="width:50em; margin-top: 1em;" src="./imgs/git-stash-terminal.png" alt="">
+            </div>
+           
+        </div>
+    </section>
+    <section class="container3">
+        <div class="block3">
+            <div>
+                <h1>Merge x Rebase</h1><br>
+                <p>Os comandos <strong>git merge</strong> e <strong>git rebase</strong> fazem a mesma coisa de maneiras diferentes.</p>
+                <p>Ao usar o Merge, as alterações de outra branch serão misturadas com as alterações da sua branch atual. Esse comando mantém a distinção de histórico entre as branchs.</p>
+                <p>Ao usar o Rebase, as alterações da sua branch atual serão adicionadas ao final do histórico da outra branch como commits adicionais. O código da sua branch atual receberá as alterações da outra branch. Esse comando não mantém a distinção de histórico entre as branchs.</p>                
+
+                <p style="margin-top: 2em;">Exemplo de Merge do Atlassian Bitbucket</p>
+                <img style="width:50em" src="https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=1632" 
+                    loading="lazy" 
+                    alt="Merging master into the feature branch">
+                    
+                <p style="margin-top: 2em;">Exemplo de Rebase do Atlassian Bitbucket</p>
+                <img style="width:50em" src="https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=1632" 
+                    loading="lazy" 
+                    alt="Rebasing the feature branch onto master">
+           </div>
+           
+        </div>
+    </section>
+    <section class="container4">
+        <div class="block3">
+            <div class="cbd4a">
+                <h1 class="whiteH1">Repositório Local</h1><br>
+                <div>
+                    <h3>Caso 1: repositório do zero</h3><br>
+                     <dl>
+                        <li>Crie um direório para conter o projeto</li>
+                        <li>Navegue até esse diretório</li>
+                        <li>Digite: <code>git init</code></li>
+                        <li>Digite <code>git add</code> Para adiconar os aquivos</li>
+                        <li>Digite <code>git commit</code></li>
+                    </dl><br>
+                    <h3>Caso 2: Um novo repositório de um projeto existente </h3><br>
+                    <dl>
+                        <li>Vá para o diretório que contém o projeto </li>
+						<li>Digite: <code>git init</code></li>
+                        <li>Digite <code>git add</code> Para adiconar os aquivos</li>
+                        <li>Provavelmente, você desejará criar um arquivo <code>.gitignore</code> imediatamente, para indicar todos os arquivos que não deseja rastrear. Use <code>git add .gitignore também.</code> </li>
+                        <li>Digite <code>git commit</code></li>
+                    </dl>
+                </div>
+           </div>
+
+            <div class="cbd4c">
+                <h3>BONUS: Conectando ao github</h3><br>
+                <dt> 
+                    <li>Vá para Github </li>
+                    <li>Log na sua conta</li>
+                    <li>Clique no botão novo repositório no canto superior direito. Você terá a opção de inicializar o repositório com um arquivo README</li>
+                    <li>Clique no botão “Criar repositório”. </li><br>
+                </dt>
+                <h4>
+                    <span>Agora siga o segundo conjunto de instruções</span><span> “Envie um repositório existente ...”</span>
+                    </h4><br>
+                <div class="code">
+                    <cod>
+                        $ git remote add origin git@github.com:username/new_repo
+                        $ git push -u origin master
+                    </cod>
+                </div>
+                
+                <h4>Na verdade, a primeira linha das instruções dirá </h4><br>
+                <div class="code"><code>$ git remote add origin https://github.com/username/new_repo</code></div>
+                
+                <h4>
+                    <span>
+                        Porem utilizando git@github.com: username / new_repo
+                    </span> <br> 
+                    <span> em vez de  https://github.com/username/new_repo,  não será </span>
+                    <span><br>
+                  necessário digitar sua senha toda vez que enviar algo para o github
+                    </span>
+                </h4>
+
+            </div>
+        </div>
+    </section>
+    <section class="container3">
+        <div class="block3">
+            <div class="cbd4a">
+                <h1>Exclusão de Branches</h1><br>
+                <div>
+                    <h3>Caso 1: Excluir Branch Local</h3><br>
+                    <div class="code">
+                        <cod>
+                            $git branch -d nome_do_branch
+                            $git branch -D nome_do_branch
+                        </cod>
+                    </div>
+                    <h3>Diferenças entre -d e -D</h3><br>
+                     <dl>
+                        <li>
+                            <span><code>-d </code> é um atalho para --delete exclui o branch localmente</span> 
+                            <span>,apenas se você já tiver feito <code>push</code>ou<code>merge</code> com seu branch remoto.</span>
+                        </li>
+                        <li>
+                            <span><code>-D</code> é um atalho para<code>--delete --force</code> , ou seja,</span>
+                            <span>exclui o branch independente de seu status de <code>push</code> ou <code>merge</code>
+                        </li>  
+                    </dl><br>
+                    <div>
+                        <img src="imgs/branch_.jpg">
+                    </div>
+                </div>
+            </div>
+                <div class="cbd4c">
+                    <h3>Caso : Excluir Branch Remoto no Git</h3><br>
+                    <div class="code">
+                        git push origin :nome_do_branch_remoto
+                    </div>
+                    <dt> 
+                        <li>Ps:é brigatório o uso do  <code>:</code> antes do nome do branch. </li>
+                    </dt>
+                    <h4>Comando Alternativo</h4><br>
+                    <div class="code">git push origin --delete nome_do_branch_remoto</div>
+                    <dt>
+                        <li>
+                            PS: Para o caso de  receber o erro error:<code>unable to delete ‘nome_do_branch_remoto’: remote ref does not exist error: failed to push some refs to ‘git@repositorio’</code> ,é porquê alguém excluiu o branch antes de você.
+                        </li>
+                    </dt>
+                </div>
+           
+        </div>
+    </section>
+
+    <section class="container4">
+        <v class="block3">
+          <div class="cbd4a">
+                <h1 class="whiteH1">Mover Commits</h1><br>
+                <h3>Caso 1: Mover Para uma Branch Existente</h3><br>
+                <div class="code">
+                    <cod>
+                        git checkout existingbranch
+                        git merge master         # Bring the commits here
+                        git checkout master
+                        git reset --keep HEAD~3  # Move master back by 3 commits.
+                        git checkout existingbranch
+                        
+                    </cod>
+                </div>
+                <dt>
+                    <li>
+                       <code>--keep </code>
+                       <span> 
+                           : preserva quaisquer alterações não confirmadas que você possa ter em arquivos não relacionados 
+                       </span>
+                      <span> 
+                          ou anula se essas alterações precisarem ser substituídas - da mesma forma que git checkoutocorre.
+                      </span>                       
+                    </li>
+                </dt>
+                <div>
+                    <img src="/imgs/commit.2.jpg">
+                </div>
+           </div>
     
+           <div class="cbd4c">
+            <h3>Caso 2: Movendo para uma nova branch</h3><br>
+            <div class="code">
+                git branch newbranch      # Create a new branch, containing all current commits
+                git reset --keep HEAD~3   # Move master back by 3 commits 
+                git checkout newbranch    # Go to the new branch that still has the desired commits
+                # Warning: after this it's not safe to do a rebase in newbranch without extra care.
+
+            </div>
+            <dt> 
+                <li>Ps:é brigatório o uso do  <code>:</code> antes do nome do branch. </li>
+            </dt>
+            <h4>Comando Alternativo</h4><br>
+            <div class="code">git push origin --delete nome_do_branch_remoto</div>
+            <dt>
+                <li>
+                    PS: Para o caso de  receber o erro error:<code>unable to delete ‘nome_do_branch_remoto’: remote ref does not exist error: failed to push some refs to ‘git@repositorio’</code> ,é porquê alguém excluiu o branch antes de você.
+                </li>
+            </dt>
+        </div>
+   
+            
+        </div>
+    </section>
+    <section class="container1">
+        <div class="block1">
+            <div class="divLogo">
+                <img id="logo" src="imgs/logo-performit2.png">
+            </div>
+            <div>
+                <h1>Programa de Formação</h1>
+                <p>Muito Obrigada!</p>
+               
+            </div>
+        </div>
+       
+    </section>
 </body>
 </html>

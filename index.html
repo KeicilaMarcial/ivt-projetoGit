@@ -8,33 +8,46 @@
     <title>IVT - Projeto Git</title>
 </head>
 <body>
-        <section class="container1">
-            <div class="block1">
-                <div class="divLogo">
-                    <img id="logo" src="imgs/logo.png">
-                </div>
-                <div>
-                    <h1>Programa de Formação</h1>
-                    <h3 class="green">Gabriel Couto</h3>
-                    <h3  class="green">Keicila Marcial</h3>
-                </div>
-            </div>
-           
-        </section>
+    <section class="container1">
+          <div class="block1">
+              <div class="divLogo">
+                  <img id="logo" src="imgs/logo.png">
+              </div>
+              <div>
+                  <h1>Programa de Formação</h1>
+                  <h3 class="green">Gabriel Couto</h3>
+                  <h3  class="green">Keicila Marcial</h3>
+              </div>
+          </div>
+          <div>
+              <h1>Programa de Formação</h1>
+              <p>Gabriel Couto</p>
+              <p>Keicila Marcial</p>
+          </div>
+      </div>
+        
+    </section>
     <section class="container2">
         <div class="block2">
             <div>
-               <div><h1 class="whiteH1">Conflito</h1></div> 
-                <div></div>
-               
+               <div>
+                   <h1 class="whiteH1">Conflito</h1>
+                   <br>
+                   <p class="whiteP">Um conflito de versões ocorre quando duas ou mais versões commitadas de um código alteraram a mesma linha de um arquivo. Nesse caso, o git não reconhece qual altereção deve ser seguida. Assim o alerta de conflito é gerado.</p>
+                   <p class="whiteP">Na imagem abaixo houve conflito em várias linhas do código, pois houve duas alterações simultâneas commitadas por pessoas diferentes nessas linhas.</p>
+                   <p class="whiteP">O código envolvido com o comentário HEAD corresponde ao código local, enquanto o restante envolvido por <code>=======</code> corresponde ao código remoto.</p>
+                   <img style="width: 100%; margin-top: 1em;" src="./imgs/git-conflito.png" alt="">
+                </div> 
             </div>
         </div>
     </section>
     <section class="container3">
         <div class="block3" >
            <div>
-               <h1>Tags</h1><br>
-              
+                <h1>Tags</h1><br>
+                <p>As tags são usadas para marcar pontos importantes no histórico do projeto.</p>
+                <p>O comando <strong>git tag [-comandos (opcional)] "nome-da-tag" [hash do commit (opcional)]</strong> possibilita a criação de tags em commits específicos.</p>
+                <img style="margin-top: 1em;" src="./imgs/git-tag.png" alt="">
             </div>
            
         </div>
@@ -43,7 +56,17 @@
         <div class="block3">
             <div>
                 <h1 class="whiteH1">Stash</h1><br>
-           </div>
+                <p class="whiteP">
+                    O comando <strong>git stash</strong> "esconde" as alterações do código que não foram commitadas. 
+                    As alterações são salvas em outro arquivo, sejam elas staged ou unstaged.
+                </p>
+                <p class="whiteP">
+                    É possível exibir os stashs realizados com <strong>git stash list</strong> ou recuperá-los com <strong>git stash pop</strong>.
+                </p>
+                <br>
+                <p class="whiteP">Possível cenário:</p>
+                <img style="width:50em; margin-top: 1em;" src="./imgs/git-stash-terminal.png" alt="">
+            </div>
            
         </div>
     </section>
@@ -51,6 +74,19 @@
         <div class="block3">
             <div>
                 <h1>Merge x Rebase</h1><br>
+                <p>Os comandos <strong>git merge</strong> e <strong>git rebase</strong> fazem a mesma coisa de maneiras diferentes.</p>
+                <p>Ao usar o Merge, as alterações de outra branch serão misturadas com as alterações da sua branch atual. Esse comando mantém a distinção de histórico entre as branchs.</p>
+                <p>Ao usar o Rebase, as alterações da sua branch atual serão adicionadas ao final do histórico da outra branch como commits adicionais. O código da sua branch atual receberá as alterações da outra branch. Esse comando não mantém a distinção de histórico entre as branchs.</p>                
+
+                <p style="margin-top: 2em;">Exemplo de Merge do Atlassian Bitbucket</p>
+                <img style="width:50em" src="https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=1632" 
+                    loading="lazy" 
+                    alt="Merging master into the feature branch">
+                    
+                <p style="margin-top: 2em;">Exemplo de Rebase do Atlassian Bitbucket</p>
+                <img style="width:50em" src="https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=1632" 
+                    loading="lazy" 
+                    alt="Rebasing the feature branch onto master">
            </div>
            
         </div>

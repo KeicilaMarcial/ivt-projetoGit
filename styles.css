@@ -90,3 +90,26 @@ h1{
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;    
 }
+#commit1{
+    height: 340px;
+    width: 500px;
+}
+#commit2{
+    height: 250px;
+    width: 550px;
+}
+.h3white{
+    color:#F5F5F5;
+}
+.green{
+    color: rgb(0, 181, 165);
+
+}
+.gray{
+   color: gray;
+   font-size: 1rem;
+}
+.codeGreen{
+    color: rgb(0, 181, 165);
+
+}

@@ -55,12 +55,38 @@ h1{
     display: flex;
     align-items: center;
 }
+
 /* -------end container3 ---------------------------------------*/
 .container4{
     background-color:  #295965;
     background-size: 100%;
-    min-height: 575px;  
+    min-height: 675px;  
 }
 .c4b3code{
     color: white;
+}
+.cbd4a{
+    position: relative;
+    display: block; 
+    
+}
+.cbd4c{
+    position: relative;
+    left: 70px;
+}
+
+.code{
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 13px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color:#F5F5F5;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;    
 }
